@@ -1,4 +1,4 @@
-# PDP-N2S
+# PDP-FADRL
 We propose a novel deep reinforcement learning model (FADRL) incorporating feature fusion attention to overcome these constraints. Our innovative encoding and masking scheme efficiently handles multi-depot and multi-constraint scenarios. Furthermore, integrating self-attention with a Graph Neural Network (GNN) framework extends the existing research beyond unit square environments to real road networks.
 
 # Dependencies
