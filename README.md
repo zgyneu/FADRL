@@ -12,8 +12,7 @@ We propose a novel deep reinforcement learning model (FADRL) incorporating featu
 ## Reproducing Experimental Results
 Due to GitHub's 25 MB file size limit, we have uploaded the entire package of source codes and datasets to OneDrive. This package includes all source codes, such as our proposed FADRL model and all baseline algorithms (DP, OR-Tools, LKH, Revised DRL-greedy, Revised DACT). Additionally, we have provided detailed documentation on the steps to obtain the experimental results for PDTSP, MDVRP, real road networks, and dynamic assignments.
 
-[OneDrive Link Here]([https://onedrive.live.com/view.aspx?resid=YOUR_FILE_ID](https://1drv.ms/f/c/d7c86f43ef725951/EhiamanLaxNHgIZ5iUH8V4oBqnmO1pYm365arq0gQC-AQQ?e=feouWH)![image](https://github.com/user-attachments/assets/42233781-c12b-4154-97b8-d870ad283490)
-)
+[OneDrive Link Here]([(https://1drv.ms/f/c/d7c86f43ef725951/EhiamanLaxNHgIZ5iUH8V4oBqnmO1pYm365arq0gQC-AQQ?e=feouWH)])
 
 ## Generating data
 Training data is generated randomly when training and testing the model. 
