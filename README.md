@@ -14,8 +14,16 @@ Due to GitHub's 25 MB file size limit, we have uploaded the entire package of so
 
 [OneDrive Link Here](https://1drv.ms/f/c/d7c86f43ef725951/EhiamanLaxNHgIZ5iUH8V4oBqnmO1pYm365arq0gQC-AQQ?e=feouWH)
 
-<a href="https://1drv.ms/f/c/d7c86f43ef725951/EhiamanLaxNHgIZ5iUH8V4oBqnmO1pYm365arq0gQC-AQQ?e=feouWH" target="_blank">OneDrive Link Here</a>
-
+# Inference
+--eval_only 
+--load_path '{add pretrained model to load here}'
+--T_max 3000 (The number of steps for inference)
+--graph_size 20 (The number of visiting nodes)
+--num_couriers 2 (The number of couriers)
+--val_size 1000 
+--val_batch_size 1000 
+--val_dataset '{add dataset here}' 
+--val_m 5 (The number of data augments for large scale problem)
 
 ## Generating data
 Training data is generated randomly when training and testing the model. 
