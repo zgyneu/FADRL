@@ -15,6 +15,7 @@ Due to GitHub's 25 MB file size limit, we have uploaded the entire package of so
 [OneDrive Link Here](https://1drv.ms/f/c/d7c86f43ef725951/EhiamanLaxNHgIZ5iUH8V4oBqnmO1pYm365arq0gQC-AQQ?e=feouWH)
 
 # Inference
+<pre><code class="language-python">
 --eval_only 
 --load_path '{add pretrained model to load here}'
 --T_max 3000 (The number of steps for inference)
@@ -24,7 +25,34 @@ Due to GitHub's 25 MB file size limit, we have uploaded the entire package of so
 --val_batch_size 1000 
 --val_dataset '{add dataset here}' 
 --val_m 5 (The number of data augments for large scale problem)
+</code></pre>
 
+
+# Examples
+## PDTSP-20
+<pre><code class="language-python">
+python run.py --eval_only --graph_size 20 --num_couriers 1 --T_max 1000 --val_m 1 --val_dataset "./datasets/pdp_20.pkl" --load_path "./pre-trained/pdtsp/20/epoch-156.pt
+</code></pre>
+## PDTSP-50
+<pre><code class="language-python">
+CUDA_VISIBLE_DEVICES=0,1 python run.py --eval_only --graph_size 50 --num_couriers 1 --T_max 1000 --val_m 1 --val_dataset "./datasets/pdp_50.pkl" --load_path "./pre-trained/pdtsp/50/epoch-196.pt
+</code></pre>
+## PDTSP-100
+<pre><code class="language-python">
+CUDA_VISIBLE_DEVICES=0,1,2 python run.py --eval_only --graph_size 100 --num_couriers 1 --T_max 1000 --val_m 2 --val_dataset "./datasets/pdp_100.pkl" --load_path "./pre-trained/pdtsp/100/epoch-195.pt" --val_size 1000 --val_batch_size 1000
+</code></pre>
+## VRP-20-2
+<pre><code class="language-python">
+python run.py --eval_only --graph_size 20 --num_couriers 2 --T_max 1000 --val_m 1  --load_path "pre-trained\vrp\vrp20.pt" --val_dataset  "./datasets/vrp_20.pkl" --val_size 1000 --val_batch_size 1000
+</code></pre>
+## VRP-50-5
+<pre><code class="language-python">
+CUDA_VISIBLE_DEVICES=0,1 python run.py --eval_only --graph_size 50 --num_couriers 5 --T_max 1000 --val_m 1  --load_path "pre-trained\vrp\vrp50.pt" --val_dataset  "./datasets/vrp_50.pkl" --val_size 1000 --val_batch_size 1000
+</code></pre>
+## VRP-100-10
+<pre><code class="language-python">
+CUDA_VISIBLE_DEVICES=0,1,2 python run.py --eval_only --graph_size 100 --num_couriers 10 --T_max 1000 --val_m 1  --load_path "pre-trained\vrp\vrp100.pt" --val_dataset  "./datasets/vrp_100.pkl" --val_size 1000 --val_batch_size 1000
+</code></pre>
 ## Generating data
 Training data is generated randomly when training and testing the model. 
 
@@ -32,6 +60,7 @@ Training data is generated randomly when training and testing the model.
 ### PDTSP examples
 
 Modify the options.py using the following values.
+
 20 nodes:
  --problem pdtsp --graph_size 20 --warm_up 2 --max_grad_norm 0.05 --val_m 1 
 
@@ -43,6 +72,7 @@ Modify the options.py using the following values.
 
 ### VRP examples
 Modify the options.py using the following values.
+
 20 nodes:
  --problem vrp --graph_size 20 --num_couriers 2 --warm_up 2 --max_grad_norm 0.05 --val_m 1 
 
