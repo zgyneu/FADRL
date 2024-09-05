@@ -1,5 +1,5 @@
 # PDP-FADRL
-We propose a novel deep reinforcement learning model (FADRL) incorporating feature fusion attention to overcome these constraints. Our innovative encoding and masking scheme efficiently handles multi-depot and multi-constraint scenarios. Furthermore, integrating self-attention with a Graph Neural Network (GNN) framework extends the existing research beyond unit square environments to real road networks.
+Planning and optimizing O2O order delivery routes involves multiple depots, capacity constraints, time-window limitations, and pickup-delivery restrictions. The huge volume of transactions and computational demands further complicate the routing problem. We propose a novel feature fusion attention deep reinforcement learning model (FADRL) to overcome these constraints. Our innovative encoding and masking scheme efficiently handles multi-depot and multi-constraint scenarios. Furthermore, integrating self-attention with a Graph Neural Network (GNN) framework extends the existing research beyond unit square environments to real road networks.
 
 # Dependencies
 * Python>=3.8
